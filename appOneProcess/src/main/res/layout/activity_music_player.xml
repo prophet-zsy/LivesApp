@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.MusicPlayerActivity">
+
+    <ImageView
+        android:id="@+id/back_ground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/return_logo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:src="@mipmap/ic_return" />
+
+                    <TextView
+                        android:id="@+id/title_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/return_logo"
+                        android:text="这里是歌名"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/info_logo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@mipmap/ic_three_dots" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:text="作者名字"
+                android:textColor="@color/colorBlack" />
+
+            <!--            将图片展示为圆形图片，依赖中的自定义控件-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_image_view"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/author_name"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="25dp"
+                android:src="@drawable/ic_music_disk" />
+
+            <RelativeLayout
+                android:id="@+id/control"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circle_image_view"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/last_music"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:src="@mipmap/ic_last_music" />
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:src="@mipmap/ic_play" />
+
+                <ImageView
+                    android:id="@+id/next_music"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:src="@mipmap/ic_next_music" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/control">
+
+                <TextView
+                    android:id="@+id/curTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:text="开始"
+                    android:textColor="@color/colorBlack" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progressDrawable="@color/colorBlack"
+                    android:thumb="@drawable/thumb"/>
+
+                <TextView
+                    android:id="@+id/totalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:text="结束"
+                    android:textColor="@color/colorBlack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progress"
+                android:layout_marginVertical="20dp">
+
+                <ImageButton
+                    android:id="@+id/change_order"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:background="@mipmap/ic_play_order" />
+
+                <ImageButton
+                    android:id="@+id/like"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:background="@mipmap/ic_like" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

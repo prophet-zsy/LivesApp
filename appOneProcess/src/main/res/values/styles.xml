@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+<!--        主题栏默认使用colorPrimary的颜色-->
+        <item name="colorPrimaryDark">@color/colorAccentDark</item>
+<!--        状态栏默认使用colorPrimaryDark的颜色-->
+        <item name="controlBackground">@color/design_default_color_background</item>
+    </style>
+
+<!--    设置activity动画-->
+    <style name="AppThemeAnimation" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+</resources>

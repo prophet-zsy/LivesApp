@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/controlBackground"
+    android:fitsSystemWindows="true"
+    >
+<!--"?attr/controlBackground"代表引用应用内的属性资源-->
+<!--   CoordinatorLayout默认表现出与FrameLayout类似的布局规则 -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:title="图书"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="619dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+<!--    todo 这里container 设置为match_parent的话，会和下面的navbar重叠-->
+    <com.example.lives.view.BottomNavigationBar
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

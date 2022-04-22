@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LivesApp</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="sport">运动</string>
+    <string name="music">音乐</string>
+    <string name="translate">翻译</string>
+    <string name="book">图书</string>
+    <string name="setting">设置</string>
+
+    <string name="sport_setting">设置锻炼计划</string>
+    <string name="history">查看历史步数</string>
+    <string name="counting">计步中...</string>
+    <string name="steps">步数</string>
+    <string name="defaultNum">0</string>
+
+    <array name="book_category_tab">
+        <item>分类</item>
+        <item>生活杂谈</item>
+        <item>家庭教育</item>
+        <item>两性生活</item>
+        <item>健康养生</item>
+        <item>美食烹饪</item>
+        <item>美食烹饪</item>
+        <item>美食烹饪</item>
+    </array>
+
+    <array name="music_tab">
+        <item>音乐</item>
+        <item>我喜欢</item>
+    </array>
+
+</resources>

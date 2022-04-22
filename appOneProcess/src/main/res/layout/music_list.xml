@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"/>
+
+    <com.example.lives.view.PlayerTab
+        android:id="@+id/player_tab"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@color/colorGray"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <com.example.lives.view.ListViewSideBar
+        android:id="@+id/ListViewSideBar"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="end" />
+
+</FrameLayout>
