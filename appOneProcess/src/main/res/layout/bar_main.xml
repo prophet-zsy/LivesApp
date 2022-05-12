@@ -31,7 +31,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 <!--    todo 这里container 设置为match_parent的话，会和下面的navbar重叠-->
-    <com.example.lives.view.BottomNavigationBar
+    <com.example.livesapp.widget.BottomNavigationBar
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="56dp"

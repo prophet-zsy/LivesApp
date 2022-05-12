@@ -9,13 +9,6 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="80dp"/>
 
-    <com.example.lives.view.PlayerTab
-        android:id="@+id/player_tab"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:background="@color/colorAccent"/>
-
     <TextView
         android:id="@+id/textDialog"
         android:layout_width="30dp"
@@ -25,7 +18,7 @@
         android:visibility="gone"
         android:layout_gravity="center"/>
 
-    <com.example.lives.view.ListViewSideBar
+    <com.example.livesapp.widget.ListViewSideBar
         android:id="@+id/ListViewSideBar"
         android:layout_width="20dp"
         android:layout_height="wrap_content"

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <attr name="mainBackground" format="color"/>
-<!--上面注册的这个属性，还不能用，未调试好  todo-->
-
-
-    
-</resources>

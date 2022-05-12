@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lives">
+    package="com.example.livesMultiProcess">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.example.lives.app.MyApp"
+        android:name="com.example.livesapp.app.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,12 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <service
-            android:name="com.example.lives.service.MusicViewService"
+        <receiver
+            android:name="com.example.livesapp.receiver.StepEventReceiver"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"></receiver>
 
-        <activity android:name="com.example.lives.activity.MainActivity">
+        <activity android:name="com.example.livesapp.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -30,13 +30,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.lives.activity.MusicPlayerActivity"
-            android:theme="@style/AppThemeAnimation"/>
-        <activity android:name="com.example.lives.activity.SportHistoryActivity" />
-        <activity android:name="com.example.lives.activity.SportSettingActivity" />
+            android:name="com.example.livesapp.activity.MusicPlayerActivity"
+            android:theme="@style/AppThemeAnimation" />
+        <activity android:name="com.example.livesapp.activity.SportHistoryActivity" />
+        <activity android:name="com.example.livesapp.activity.SportSettingActivity" />
 
-        <service android:name="com.example.lives.service.MusicService" />
-        <service android:name="com.example.lives.service.StepService" />
+        <service android:name="com.example.livesapp.service.MusicForegroundService" />
+        <service android:name="com.example.livesapp.service.StepService" />
+
+        <receiver android:name="com.example.livesapp.receiver.MusicRemoteControlReceiver" />
     </application>
 
 </manifest>

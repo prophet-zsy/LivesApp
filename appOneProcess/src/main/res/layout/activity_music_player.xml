@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".activity.MusicPlayerActivity">
+    tools:context="com.example.livesapp.activity.MusicPlayerActivity">
 
     <ImageView
         android:id="@+id/back_ground"
@@ -99,14 +99,27 @@
                     android:layout_margin="20dp"
                     android:src="@mipmap/ic_last_music" />
 
-                <ImageView
-                    android:id="@+id/play"
+                <FrameLayout
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_margin="20dp"
-                    android:src="@mipmap/ic_play" />
+                    android:layout_margin="20dp">
+                    <ImageView
+                        android:id="@+id/play"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@mipmap/ic_play" />
+                    <ProgressBar
+                        android:id="@+id/downloadProgress"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:indeterminateTintMode="src_atop"
+                        android:indeterminateTint="@color/colorGray"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                </FrameLayout>
+
 
                 <ImageView
                     android:id="@+id/next_music"
@@ -144,7 +157,7 @@
                     android:maxHeight="3dp"
                     android:minHeight="3dp"
                     android:progressDrawable="@color/colorBlack"
-                    android:thumb="@drawable/thumb"/>
+                    android:thumb="@drawable/thumb" />
 
                 <TextView
                     android:id="@+id/totalTime"

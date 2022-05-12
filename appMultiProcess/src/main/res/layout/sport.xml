@@ -31,7 +31,7 @@
     </LinearLayout>
 
 
-    <com.example.lives.view.StepArcView
+    <com.example.livesMultiProcess.widget.StepArcView
         android:id="@+id/stepArc"
         android:layout_width="270dp"
         android:layout_height="270dp"

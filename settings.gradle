@@ -1,0 +1,3 @@
+rootProject.name = "LivesApp"
+include ':appMultiProcess'
+include ':appOneProcess'
